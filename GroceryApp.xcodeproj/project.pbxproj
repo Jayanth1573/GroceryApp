@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */; };
+		FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DD22C1DBF5400289EEB /* String+Extensions.swift */; };
 		FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */; };
 		FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857C2C1950E100CEA406 /* ContentView.swift */; };
 		FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1857E2C1950E200CEA406 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		FD938DD22C1DBF5400289EEB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDB185772C1950E100CEA406 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
 		FDB1857C2C1950E100CEA406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD938DCE2C1DBEE900289EEB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FD938DD12C1DBF3C00289EEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD938DD22C1DBF5400289EEB /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FDB1856E2C1950E100CEA406 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +71,8 @@
 		FDB185792C1950E100CEA406 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FD938DD12C1DBF3C00289EEB /* Extensions */,
+				FD938DCE2C1DBEE900289EEB /* Screens */,
 				FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */,
 				FDB1857C2C1950E100CEA406 /* ContentView.swift */,
 				FDB1857E2C1950E200CEA406 /* Assets.xcassets */,
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */,
+				FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */,
 				FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */,
 				FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */,
 			);
