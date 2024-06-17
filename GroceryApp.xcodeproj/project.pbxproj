@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */; };
 		FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */; };
 		FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DD22C1DBF5400289EEB /* String+Extensions.swift */; };
 		FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		FD938DD22C1DBF5400289EEB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDB185772C1950E100CEA406 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0567CF2C1EB56200DC8CEE /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
 		FD938DCE2C1DBEE900289EEB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		FDB185792C1950E100CEA406 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FD0567CF2C1EB56200DC8CEE /* Clients */,
 				FD938DD12C1DBF3C00289EEB /* Extensions */,
 				FD938DCE2C1DBEE900289EEB /* Screens */,
 				FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */,
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */,
+				FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */,
 				FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */,
 				FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */,
 				FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */,
