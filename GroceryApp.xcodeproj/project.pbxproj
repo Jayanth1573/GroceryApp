@@ -8,16 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */; };
+		FD29F21C2C284C2E00D0E2B1 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */; };
+		FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */; };
 		FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */; };
 		FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DD22C1DBF5400289EEB /* String+Extensions.swift */; };
 		FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */; };
 		FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857C2C1950E100CEA406 /* ContentView.swift */; };
 		FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1857E2C1950E200CEA406 /* Assets.xcassets */; };
 		FDB185822C1950E200CEA406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB185812C1950E200CEA406 /* Preview Assets.xcassets */; };
+		FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */; };
+		FDD3B0C02C205CAF001A1255 /* RegisterResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */; };
+		FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0C22C205D42001A1255 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
 		FD938DD22C1DBF5400289EEB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDB185772C1950E100CEA406 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +32,9 @@
 		FDB1857C2C1950E100CEA406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDB1857E2C1950E200CEA406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB185812C1950E200CEA406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
+		FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseDTO.swift; sourceTree = "<group>"; };
+		FDD3B0C22C205D42001A1255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */,
+				FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -81,6 +92,8 @@
 		FDB185792C1950E100CEA406 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FDD3B0C12C205D36001A1255 /* Utils */,
+				FDD3B0BC2C205BF6001A1255 /* Models */,
 				FD0567CF2C1EB56200DC8CEE /* Clients */,
 				FD938DD12C1DBF3C00289EEB /* Extensions */,
 				FD938DCE2C1DBEE900289EEB /* Screens */,
@@ -98,6 +111,24 @@
 				FDB185812C1950E200CEA406 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDD3B0BC2C205BF6001A1255 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */,
+				FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */,
+				FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDD3B0C12C205D36001A1255 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FDD3B0C22C205D42001A1255 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,10 +202,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */,
+				FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */,
+				FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */,
 				FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */,
 				FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */,
 				FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */,
+				FD29F21C2C284C2E00D0E2B1 /* LoginResponseDTO.swift in Sources */,
 				FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */,
+				FDD3B0C02C205CAF001A1255 /* RegisterResponseDTO.swift in Sources */,
+				FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

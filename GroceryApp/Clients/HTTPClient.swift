@@ -50,6 +50,7 @@ struct Resource<T: Codable> {
     var method: HTTPMethod = .get([])
     var modelType: T.Type
 }
+
 struct HTTPClient {
     
     func load<T: Codable>(_ resource: Resource<T>) async throws -> T {
@@ -71,11 +72,10 @@ struct HTTPClient {
         }
         
         let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = ["Content-Type": "application/json"]
         let session = URLSession(configuration: configuration)
         let (data,response) = try await session.data(for: request)
-        guard let httpResponse = response as? HTTPURLResponse,
-              httpResponse.statusCode == 200
-        else {
+        guard let _ = response as? HTTPURLResponse else {
             throw NetworkError.invalidResponse
         }
         guard let result = try? JSONDecoder().decode(resource.modelType, from: data) else {

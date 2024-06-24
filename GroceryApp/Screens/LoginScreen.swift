@@ -1,40 +1,43 @@
 //
-//  RegistrationScreen.swift
+//  LoginScreen.swift
 //  GroceryApp
 //
-//  Created by Jayanth Ambaldhage on 15/06/24.
+//  Created by Jayanth Ambaldhage on 22/06/24.
 //
 
 import SwiftUI
 
-
-struct RegisterScreen: View {
+struct LoginScreen: View {
     
     @EnvironmentObject private var model: GroceryModel
+    
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var errorMessage: String = ""
+    
     private var isInputValid: Bool {
         !username.isEmptyOrWhiteSpace && !password.isEmptyOrWhiteSpace
     }
     
-    private func register() async {
+    private func login() async {
         do {
-            let registerResponseDTO = try await model.register(username: username, password: password)
-            if !registerResponseDTO.error {
-                print("Registered successfully")
-                // take the user to the login screen
+            let loginResponseDTO = try await model.login(username: username, password: password)
+            if !loginResponseDTO.error {
+                print("logged in successfully.")
+                // take the user to grocery category list screen
             } else {
-                errorMessage = registerResponseDTO.reason ?? ""
+                errorMessage = loginResponseDTO.reason ?? ""
             }
         } catch {
             errorMessage = error.localizedDescription
         }
         
     }
+    
     var body: some View {
-        NavigationStack{
-            VStack {
+        NavigationStack {
+            VStack{
+                
                 TextField("username", text: $username)
                     .textInputAutocapitalization(.never)
                     .padding()
@@ -46,9 +49,9 @@ struct RegisterScreen: View {
                     .frame(width: 350,height: 50)
                     .background(Color.black.opacity(0.05))
                     .cornerRadius(10)
-                Button("Register"){
+                Button("Login"){
                     Task {
-                        await register()
+                        await login()
                     }
                 }
                 .disabled(!isInputValid)
@@ -57,25 +60,28 @@ struct RegisterScreen: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
+                HStack {
+                    Text("Don't have an account ?")
+                    NavigationLink(destination: RegisterScreen()) {
+                        Text("Register")
+                    }
+                }
                 Text(errorMessage)
                     .foregroundColor(.black)
                 Spacer()
                 
-                
             }
             .padding()
-            .navigationTitle("Registration")
-            
+            .navigationTitle("Login")
         }
         
     }
-    
 }
-
-struct RegistrationScreen_Previews: PreviewProvider {
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterScreen()
+        
+        LoginScreen()
             .environmentObject(GroceryModel())
+        
     }
 }
-
