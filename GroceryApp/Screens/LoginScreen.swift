@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginScreen: View {
     
     @EnvironmentObject private var model: GroceryModel
+    @EnvironmentObject private var appState: AppState
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -24,7 +25,9 @@ struct LoginScreen: View {
             let loginResponseDTO = try await model.login(username: username, password: password)
             if !loginResponseDTO.error {
                 print("logged in successfully.")
+                
                 // take the user to grocery category list screen
+                appState.routes.append(.groceryCategoryList)
             } else {
                 errorMessage = loginResponseDTO.reason ?? ""
             }
@@ -35,7 +38,7 @@ struct LoginScreen: View {
     }
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             VStack{
                 
                 TextField("username", text: $username)
@@ -60,12 +63,6 @@ struct LoginScreen: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
-                HStack {
-                    Text("Don't have an account ?")
-                    NavigationLink(destination: RegisterScreen()) {
-                        Text("Register")
-                    }
-                }
                 Text(errorMessage)
                     .foregroundColor(.black)
                 Spacer()
@@ -73,15 +70,18 @@ struct LoginScreen: View {
             }
             .padding()
             .navigationTitle("Login")
-        }
+//        }
         
     }
 }
 struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        
-        LoginScreen()
-            .environmentObject(GroceryModel())
+        NavigationStack {
+            LoginScreen()
+                .environmentObject(GroceryModel())
+                .environmentObject(AppState())
+        }
+       
         
     }
 }

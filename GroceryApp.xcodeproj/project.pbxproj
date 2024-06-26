@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */; };
-		FD29F21C2C284C2E00D0E2B1 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */; };
+		FD46814B2C2B193000A80E4A /* GroceryAppSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = FD46814A2C2B193000A80E4A /* GroceryAppSharedDTO */; };
+		FD5806672C2A67A100F18B8F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5806662C2A67A100F18B8F /* AppState.swift */; };
 		FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */; };
-		FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */; };
+		FD938DD02C1DBEFF00289EEB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */; };
 		FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DD22C1DBF5400289EEB /* String+Extensions.swift */; };
 		FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */; };
 		FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857C2C1950E100CEA406 /* ContentView.swift */; };
 		FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1857E2C1950E200CEA406 /* Assets.xcassets */; };
 		FDB185822C1950E200CEA406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB185812C1950E200CEA406 /* Preview Assets.xcassets */; };
 		FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */; };
-		FDD3B0C02C205CAF001A1255 /* RegisterResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */; };
 		FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0C22C205D42001A1255 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		FD5806662C2A67A100F18B8F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationScreen.swift; sourceTree = "<group>"; };
+		FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		FD938DD22C1DBF5400289EEB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FDB185772C1950E100CEA406 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
@@ -33,7 +33,6 @@
 		FDB1857E2C1950E200CEA406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB185812C1950E200CEA406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
-		FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseDTO.swift; sourceTree = "<group>"; };
 		FDD3B0C22C205D42001A1255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD46814B2C2B193000A80E4A /* GroceryAppSharedDTO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,10 +56,17 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		FD4681492C2B193000A80E4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FD938DCE2C1DBEE900289EEB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FD938DCF2C1DBEFF00289EEB /* RegistrationScreen.swift */,
+				FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */,
 				FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */,
 			);
 			path = Screens;
@@ -78,6 +85,7 @@
 			children = (
 				FDB185792C1950E100CEA406 /* GroceryApp */,
 				FDB185782C1950E100CEA406 /* Products */,
+				FD4681492C2B193000A80E4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,8 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */,
-				FDD3B0BF2C205CAF001A1255 /* RegisterResponseDTO.swift */,
-				FD29F21B2C284C2E00D0E2B1 /* LoginResponseDTO.swift */,
+				FD5806662C2A67A100F18B8F /* AppState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +154,9 @@
 			dependencies = (
 			);
 			name = GroceryApp;
+			packageProductDependencies = (
+				FD46814A2C2B193000A80E4A /* GroceryAppSharedDTO */,
+			);
 			productName = GroceryApp;
 			productReference = FDB185772C1950E100CEA406 /* GroceryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +185,9 @@
 				Base,
 			);
 			mainGroup = FDB1856E2C1950E100CEA406;
+			packageReferences = (
+				FDD6AF5B2C2AED2D00F6CA61 /* XCRemoteSwiftPackageReference "GroceryAppSharedDTO" */,
+			);
 			productRefGroup = FDB185782C1950E100CEA406 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -205,11 +218,10 @@
 				FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */,
 				FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */,
 				FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */,
-				FD938DD02C1DBEFF00289EEB /* RegistrationScreen.swift in Sources */,
+				FD938DD02C1DBEFF00289EEB /* RegisterScreen.swift in Sources */,
 				FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */,
-				FD29F21C2C284C2E00D0E2B1 /* LoginResponseDTO.swift in Sources */,
+				FD5806672C2A67A100F18B8F /* AppState.swift in Sources */,
 				FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */,
-				FDD3B0C02C205CAF001A1255 /* RegisterResponseDTO.swift in Sources */,
 				FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDD6AF5B2C2AED2D00F6CA61 /* XCRemoteSwiftPackageReference "GroceryAppSharedDTO" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jayanth1573/GroceryAppSharedDTO.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD46814A2C2B193000A80E4A /* GroceryAppSharedDTO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDD6AF5B2C2AED2D00F6CA61 /* XCRemoteSwiftPackageReference "GroceryAppSharedDTO" */;
+			productName = GroceryAppSharedDTO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDB1856F2C1950E100CEA406 /* Project object */;
 }
