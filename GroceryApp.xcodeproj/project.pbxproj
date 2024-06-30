@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */; };
+		FD4294382C31297B00AFCF60 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4294372C31297B00AFCF60 /* UserDefaults+Extensions.swift */; };
 		FD46814B2C2B193000A80E4A /* GroceryAppSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = FD46814A2C2B193000A80E4A /* GroceryAppSharedDTO */; };
 		FD5806672C2A67A100F18B8F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5806662C2A67A100F18B8F /* AppState.swift */; };
+		FD6A531B2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A531A2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift */; };
 		FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */; };
 		FD938DD02C1DBEFF00289EEB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */; };
 		FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DD22C1DBF5400289EEB /* String+Extensions.swift */; };
+		FD93E1CB2C3032000053A898 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93E1CA2C3032000053A898 /* ColorSelector.swift */; };
+		FD93E1CD2C303AD00053A898 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD93E1CC2C303AD00053A898 /* Color+Extensions.swift */; };
 		FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */; };
 		FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857C2C1950E100CEA406 /* ContentView.swift */; };
 		FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1857E2C1950E200CEA406 /* Assets.xcassets */; };
@@ -23,10 +27,14 @@
 
 /* Begin PBXFileReference section */
 		FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FD4294372C31297B00AFCF60 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		FD5806662C2A67A100F18B8F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FD6A531A2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryScreen.swift; sourceTree = "<group>"; };
 		FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		FD938DD22C1DBF5400289EEB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		FD93E1CA2C3032000053A898 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
+		FD93E1CC2C303AD00053A898 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		FDB185772C1950E100CEA406 /* GroceryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB1857A2C1950E100CEA406 /* GroceryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryAppApp.swift; sourceTree = "<group>"; };
 		FDB1857C2C1950E100CEA406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +76,7 @@
 			children = (
 				FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */,
 				FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */,
+				FD6A531A2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -76,8 +85,18 @@
 			isa = PBXGroup;
 			children = (
 				FD938DD22C1DBF5400289EEB /* String+Extensions.swift */,
+				FD93E1CC2C303AD00053A898 /* Color+Extensions.swift */,
+				FD4294372C31297B00AFCF60 /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FD93E1C92C3031B40053A898 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FD93E1CA2C3032000053A898 /* ColorSelector.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FDB1856E2C1950E100CEA406 = {
@@ -100,6 +119,7 @@
 		FDB185792C1950E100CEA406 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				FD93E1C92C3031B40053A898 /* Views */,
 				FDD3B0C12C205D36001A1255 /* Utils */,
 				FDD3B0BC2C205BF6001A1255 /* Models */,
 				FD0567CF2C1EB56200DC8CEE /* Clients */,
@@ -214,14 +234,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD4294382C31297B00AFCF60 /* UserDefaults+Extensions.swift in Sources */,
 				FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */,
 				FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */,
 				FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */,
+				FD6A531B2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift in Sources */,
 				FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */,
 				FD938DD02C1DBEFF00289EEB /* RegisterScreen.swift in Sources */,
 				FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */,
+				FD93E1CD2C303AD00053A898 /* Color+Extensions.swift in Sources */,
 				FD5806672C2A67A100F18B8F /* AppState.swift in Sources */,
 				FDB1857B2C1950E100CEA406 /* GroceryAppApp.swift in Sources */,
+				FD93E1CB2C3032000053A898 /* ColorSelector.swift in Sources */,
 				FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
