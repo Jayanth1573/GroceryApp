@@ -21,6 +21,7 @@ struct AddGroceryCategoryScreen: View {
         
         do {
             try await model.saveGroceryCategory(groceryCategoryRequestDTO)
+            dismiss()
         } catch {
             print(error.localizedDescription)
         }
@@ -32,6 +33,7 @@ struct AddGroceryCategoryScreen: View {
     }
     
     var body: some View {
+
         List {
             TextField("title", text: $title)
             ColorSelector(colorCode: $colorCode)

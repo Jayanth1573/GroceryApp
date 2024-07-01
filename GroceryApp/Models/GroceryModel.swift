@@ -8,8 +8,12 @@
 import Foundation
 import GroceryAppSharedDTO
 
+@MainActor
 class GroceryModel: ObservableObject {
+    
+    @Published var groceryCategories: [GroceryCategoryResponseDTO] = []
     let httpClient = HTTPClient()
+    
     
     func register(username: String, password: String) async throws -> RegisterResponseDTO {
         let registerData = ["username": username, "password": password]
@@ -34,6 +38,29 @@ class GroceryModel: ObservableObject {
         return loginResponseDTO
     }
     
+    func deleteGroceryCategory(groceryCategoryId: UUID) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
+        
+        let resource = Resource(url: Constants.deleteGroceryCategory(userdId: userId, groceryCategoryId: groceryCategoryId), method: .delete, modelType: GroceryCategoryResponseDTO.self)
+        
+        let deletedGroceryCategory = try await httpClient.load(resource)
+        
+        groceryCategories = groceryCategories.filter {$0.id != deletedGroceryCategory.id}
+    }
+    
+    
+    func populateGroceryCategories() async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
+        
+        let resource = Resource(url: Constants.groceryCategoriesBy(userId: userId), modelType: [GroceryCategoryResponseDTO].self)
+        
+            groceryCategories = try await httpClient.load(resource)
+    }
+    
     func saveGroceryCategory(_ groceryCategoryRequestDTO: GroceryCategoryRequestDTO) async throws {
        
         guard let userId = UserDefaults.standard.userId else {
@@ -41,9 +68,11 @@ class GroceryModel: ObservableObject {
         }
         
 //        create a link
-        let resource = try Resource(url: Constants.groceryCategories(userId: userId), method: .post(JSONEncoder().encode(groceryCategoryRequestDTO)), modelType: GroceryCategoryResponseDTO.self)
+        let resource = try Resource(url: Constants.saveGroceryCategoriesBy(userId: userId), method: .post(JSONEncoder().encode(groceryCategoryRequestDTO)), modelType: GroceryCategoryResponseDTO.self)
         //  /api/users/:userId/grocery-categories
         
-        let newGroceryCategory = try await httpClient.load(resource)
+        let groceryCategory = try await httpClient.load(resource)
+        
+        groceryCategories.append(groceryCategory)
     }
 }
