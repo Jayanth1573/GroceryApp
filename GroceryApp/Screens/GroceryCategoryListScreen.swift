@@ -41,12 +41,16 @@ struct GroceryCategoryListScreen: View {
             } else {
                 List {
                     ForEach(model.groceryCategories) { groceryCategory in
-                        HStack {
-                            Circle()
-                                .fill(Color.fromHex(groceryCategory.colorCode))
-                                .frame(width: 25, height: 25)
-                            Text(groceryCategory.title)
+                        
+                        NavigationLink(value: Route.groceryCategoryDetail(groceryCategory)) {
+                            HStack {
+                                Circle()
+                                    .fill(Color.fromHex(groceryCategory.colorCode))
+                                    .frame(width: 25, height: 25)
+                                Text(groceryCategory.title)
+                            }
                         }
+                       
                     }.onDelete(perform: deleteGroceryCategory)
                 }
             }
@@ -77,12 +81,41 @@ struct GroceryCategoryListScreen: View {
     }
 }
 
+
+struct GroceryCategoryListScreenContainer: View {
+    @StateObject private var model = GroceryModel()
+    @StateObject private var appState = AppState()
+    
+    var body: some View {
+        NavigationStack(path: $appState.routes) {
+            GroceryCategoryListScreen()
+                .navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .register:
+                        RegisterScreen()
+                    case .login:
+                        LoginScreen()
+                    case .groceryCategoryList:
+                        Text("Grocery category list")
+                    case .groceryCategoryDetail(let groceryCategory):
+                        GroceryDetailScreen(groceryCategory: groceryCategory)
+                    }
+                }
+            
+        }
+        .environmentObject(model)
+        .environmentObject(appState)
+    }
+}
+
 struct GroceryCategoryListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
-            GroceryCategoryListScreen()
-                .environmentObject(GroceryModel())
-        }
+//        NavigationStack {
+//            GroceryCategoryListScreen()
+//                .environmentObject(GroceryModel())
+//        }
+        
+        GroceryCategoryListScreenContainer()
         
     }
 }

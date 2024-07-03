@@ -12,6 +12,9 @@ import GroceryAppSharedDTO
 class GroceryModel: ObservableObject {
     
     @Published var groceryCategories: [GroceryCategoryResponseDTO] = []
+    @Published var groceryItems: [GroceryItemResponseDTO] = []
+    @Published var groceryCategory: GroceryCategoryResponseDTO?
+    
     let httpClient = HTTPClient()
     
     
@@ -43,7 +46,7 @@ class GroceryModel: ObservableObject {
             return
         }
         
-        let resource = Resource(url: Constants.deleteGroceryCategory(userdId: userId, groceryCategoryId: groceryCategoryId), method: .delete, modelType: GroceryCategoryResponseDTO.self)
+        let resource = Resource(url: Constants.deleteGroceryCategory(userId: userId, groceryCategoryId: groceryCategoryId), method: .delete, modelType: GroceryCategoryResponseDTO.self)
         
         let deletedGroceryCategory = try await httpClient.load(resource)
         
@@ -59,6 +62,19 @@ class GroceryModel: ObservableObject {
         let resource = Resource(url: Constants.groceryCategoriesBy(userId: userId), modelType: [GroceryCategoryResponseDTO].self)
         
             groceryCategories = try await httpClient.load(resource)
+    }
+    
+    func saveGroceryItem(_ groceryItemRequestDTO: GroceryItemRequestDTO, groceryCategoryId: UUID) async throws {
+        
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
+        
+        let resource = try Resource(url: Constants.saveGroceryItem(userId: userId, groceryCategoryId: groceryCategoryId), method: .post(JSONEncoder().encode(groceryItemRequestDTO)), modelType: GroceryItemResponseDTO.self)
+        
+        let newGroceryItem = try await httpClient.load(resource)
+        groceryItems.append(newGroceryItem)
+        
     }
     
     func saveGroceryCategory(_ groceryCategoryRequestDTO: GroceryCategoryRequestDTO) async throws {
