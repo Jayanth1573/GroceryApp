@@ -41,6 +41,20 @@ class GroceryModel: ObservableObject {
         return loginResponseDTO
     }
     
+    
+    func deleteGroceryItem(groceryItemId: UUID, groceryCategoryId: UUID) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
+        
+        let resource = Resource(url: Constants.deleteGroceryItem(userId: userId, groceryCategoryId: groceryCategoryId, groceryItemId: groceryItemId), method: .delete, modelType: GroceryItemResponseDTO.self)
+        
+        let deletedGroceryItem = try await httpClient.load(resource)
+        
+        groceryItems = groceryItems.filter{$0.id != deletedGroceryItem.id}
+    }
+    
+    
     func deleteGroceryCategory(groceryCategoryId: UUID) async throws {
         guard let userId = UserDefaults.standard.userId else {
             return
@@ -51,6 +65,17 @@ class GroceryModel: ObservableObject {
         let deletedGroceryCategory = try await httpClient.load(resource)
         
         groceryCategories = groceryCategories.filter {$0.id != deletedGroceryCategory.id}
+    }
+    
+    
+    func populateGroceryItemsBy(groceryCategoryId: UUID) async throws {
+        guard let userId = UserDefaults.standard.userId else {
+            return
+        }
+        
+        let resource = Resource(url: Constants.groceryItemsBy(userId: userId, groceryCategoryId: groceryCategoryId), modelType: [GroceryItemResponseDTO].self)
+        
+        groceryItems = try await httpClient.load(resource)
     }
     
     
