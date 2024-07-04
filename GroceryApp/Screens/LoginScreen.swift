@@ -30,15 +30,16 @@ struct LoginScreen: View {
                 appState.routes.append(.groceryCategoryList)
             } else {
                 errorMessage = loginResponseDTO.reason ?? ""
+                appState.errorWrapper = ErrorWrapper(error: GroceryError.login, guidance: loginResponseDTO.reason ?? "")
             }
         } catch {
-            errorMessage = error.localizedDescription
+//            errorMessage = error.localizedDescription
+            appState.errorWrapper = ErrorWrapper(error: error, guidance: error.localizedDescription)
         }
         
     }
     
     var body: some View {
-//        NavigationStack {
             VStack{
                 
                 TextField("username", text: $username)
@@ -63,14 +64,24 @@ struct LoginScreen: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding()
-                Text(errorMessage)
-                    .foregroundColor(.black)
+                HStack {
+                    Text("Don't have an account ?")
+                    Button("Register"){
+                        appState.routes.append(.register)
+                    }
+                }
+//                Text(errorMessage)
+//                    .foregroundColor(.black)
                 Spacer()
                 
             }
             .padding()
             .navigationTitle("Login")
-//        }
+            .navigationBarBackButtonHidden(true)
+            .sheet(item: $appState.errorWrapper) { errorWrapper in
+                ErrorView(errorWrapper: errorWrapper)
+                    .presentationDetents([.fraction(0.25)])
+            }
         
     }
 }

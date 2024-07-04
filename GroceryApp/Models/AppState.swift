@@ -8,6 +8,11 @@
 import Foundation
 import GroceryAppSharedDTO
 
+enum GroceryError: Error {
+    case login
+    case register
+}
+
 enum Route: Hashable {
     case login
     case register
@@ -18,5 +23,5 @@ enum Route: Hashable {
 class AppState: ObservableObject {
     
     @Published var routes: [Route] = []
-    
+    @Published var errorWrapper: ErrorWrapper?
 }

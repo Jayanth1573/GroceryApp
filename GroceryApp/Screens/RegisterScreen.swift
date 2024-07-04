@@ -27,11 +27,14 @@ struct RegisterScreen: View {
                 //                print("Registered successfully")
                 appState.routes.append(.login)
                 // take the user to the login screen
+                appState.routes.append(.login)
             } else {
-                errorMessage = registerResponseDTO.reason ?? ""
+//                errorMessage = registerResponseDTO.reason ?? ""
+                appState.errorWrapper = ErrorWrapper(error: GroceryError.register, guidance: registerResponseDTO.reason ?? "")
             }
         } catch {
             errorMessage = error.localizedDescription
+            appState.errorWrapper = ErrorWrapper(error: error, guidance: errorMessage)
         }
         
     }
@@ -75,6 +78,11 @@ struct RegisterScreen: View {
         }
         .padding()
         .navigationTitle("Registration")
+        .navigationBarBackButtonHidden(true)
+        .sheet(item: $appState.errorWrapper) { errorWrapper in
+            ErrorView(errorWrapper: errorWrapper)
+                .presentationDetents([.fraction(0.25)])
+        }
     }
 }
 
@@ -93,7 +101,7 @@ struct RegisterScreenContainer: View {
                     case .login:
                         LoginScreen()
                     case .groceryCategoryList:
-                        Text("Grocery category list")
+                        GroceryCategoryListScreen()
                     case .groceryCategoryDetail(let groceryCategory):
                         GroceryDetailScreen(groceryCategory: groceryCategory)
                     }

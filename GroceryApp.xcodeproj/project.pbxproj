@@ -11,6 +11,8 @@
 		FD4294382C31297B00AFCF60 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4294372C31297B00AFCF60 /* UserDefaults+Extensions.swift */; };
 		FD46814B2C2B193000A80E4A /* GroceryAppSharedDTO in Frameworks */ = {isa = PBXBuildFile; productRef = FD46814A2C2B193000A80E4A /* GroceryAppSharedDTO */; };
 		FD5806672C2A67A100F18B8F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5806662C2A67A100F18B8F /* AppState.swift */; };
+		FD68F1582C3659B800E421A3 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68F1572C3659B800E421A3 /* ErrorWrapper.swift */; };
+		FD68F15A2C365A4C00E421A3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD68F1592C365A4C00E421A3 /* ErrorView.swift */; };
 		FD6A531B2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6A531A2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift */; };
 		FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */; };
 		FD938DD02C1DBEFF00289EEB /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */; };
@@ -35,6 +37,8 @@
 		FD0567D02C1EB57600DC8CEE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FD4294372C31297B00AFCF60 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		FD5806662C2A67A100F18B8F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FD68F1572C3659B800E421A3 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		FD68F1592C365A4C00E421A3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FD6A531A2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroceryCategoryScreen.swift; sourceTree = "<group>"; };
 		FD71F89C2C26D1EE00DE2363 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FD938DCF2C1DBEFF00289EEB /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				FD93E1CA2C3032000053A898 /* ColorSelector.swift */,
 				FDE228B72C354864000019C0 /* GroceryItemListView.swift */,
+				FD68F1592C365A4C00E421A3 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			children = (
 				FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */,
 				FD5806662C2A67A100F18B8F /* AppState.swift */,
+				FD68F1572C3659B800E421A3 /* ErrorWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,10 +262,12 @@
 				FD4294382C31297B00AFCF60 /* UserDefaults+Extensions.swift in Sources */,
 				FDF55AC02C33279D00630322 /* GroceryCategoryListScreen.swift in Sources */,
 				FDE9CDAD2C3427E100D5CCA2 /* AddGroceryItemScreen.swift in Sources */,
+				FD68F15A2C365A4C00E421A3 /* ErrorView.swift in Sources */,
 				FDE9CDAB2C3424A600D5CCA2 /* GroceryDetailScreen.swift in Sources */,
 				FD938DD32C1DBF5400289EEB /* String+Extensions.swift in Sources */,
 				FDE228B82C354864000019C0 /* GroceryItemListView.swift in Sources */,
 				FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */,
+				FD68F1582C3659B800E421A3 /* ErrorWrapper.swift in Sources */,
 				FD71F89D2C26D1EE00DE2363 /* LoginScreen.swift in Sources */,
 				FD6A531B2C2EFE5D009A2CFB /* AddGroceryCategoryScreen.swift in Sources */,
 				FD0567D12C1EB57600DC8CEE /* HTTPClient.swift in Sources */,
