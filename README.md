@@ -32,5 +32,5 @@ The Grocery iOS App is a convenient and user-friendly application that helps use
 
 
 ## Links
-**Server:** [Server](https://github.com/Jayanth1573/Grocery-App-Server.git)
+**Server:** [Server](https://github.com/Jayanth1573/Grocery-App-Server.git), 
 **Shared DTO** [SharedDTO](https://github.com/Jayanth1573/QuizAppSharedDTO.git)
