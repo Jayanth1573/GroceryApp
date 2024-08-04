@@ -25,7 +25,7 @@ struct RegisterScreen: View {
             let registerResponseDTO = try await model.register(username: username, password: password)
             if !registerResponseDTO.error {
                 //                print("Registered successfully")
-                appState.routes.append(.login)
+//                appState.routes.append(.login)
                 // take the user to the login screen
                 appState.routes.append(.login)
             } else {

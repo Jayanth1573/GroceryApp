@@ -23,6 +23,7 @@
 		FDB1857D2C1950E100CEA406 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1857C2C1950E100CEA406 /* ContentView.swift */; };
 		FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB1857E2C1950E200CEA406 /* Assets.xcassets */; };
 		FDB185822C1950E200CEA406 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB185812C1950E200CEA406 /* Preview Assets.xcassets */; };
+		FDC19F682C5F4B1C00468F71 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDC19F672C5F4B1C00468F71 /* Launch Screen.storyboard */; };
 		FDD3B0BE2C205C07001A1255 /* GroceryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */; };
 		FDD3B0C32C205D42001A1255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3B0C22C205D42001A1255 /* Constants.swift */; };
 		FDE228B82C354864000019C0 /* GroceryItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE228B72C354864000019C0 /* GroceryItemListView.swift */; };
@@ -50,6 +51,7 @@
 		FDB1857C2C1950E100CEA406 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDB1857E2C1950E200CEA406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB185812C1950E200CEA406 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDC19F672C5F4B1C00468F71 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FDD3B0BD2C205C07001A1255 /* GroceryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryModel.swift; sourceTree = "<group>"; };
 		FDD3B0C22C205D42001A1255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDE228B72C354864000019C0 /* GroceryItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemListView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				FDB1857C2C1950E100CEA406 /* ContentView.swift */,
 				FDB1857E2C1950E200CEA406 /* Assets.xcassets */,
 				FDB185802C1950E200CEA406 /* Preview Content */,
+				FDC19F672C5F4B1C00468F71 /* Launch Screen.storyboard */,
 			);
 			path = GroceryApp;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDC19F682C5F4B1C00468F71 /* Launch Screen.storyboard in Resources */,
 				FDB185822C1950E200CEA406 /* Preview Assets.xcassets in Resources */,
 				FDB1857F2C1950E200CEA406 /* Assets.xcassets in Resources */,
 			);
